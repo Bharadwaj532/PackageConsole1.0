@@ -1,0 +1,21 @@
+﻿<Window x:Class="PackageConsole.AddSectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PackageConsole"
+        mc:Ignorable="d"
+        Title="Add Section" Height="600" Width="600">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Section Name:"/>
+            <ComboBox x:Name="SectionComboBox" Width="350" Height="30" SelectionChanged="SectionComboBox_SelectionChanged"/>
+            <TextBlock Text="Key-Value Pairs:" Margin="0,10,0,0"/>
+            <StackPanel x:Name="KeyValuePanel">
+                <!-- Key-Value pairs will be added here dynamically -->
+            </StackPanel>
+           
+            <Button Content="Save Section" Click="SaveSection_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
